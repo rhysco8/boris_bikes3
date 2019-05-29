@@ -1,2 +1,5 @@
 class DockingStation
-end 
+  def release_bike
+    puts "Hello"
+  end
+end
