@@ -12,4 +12,8 @@ describe DockingStation do
     expect(docking_station.bike).to eq(bike)
   end
   it { is_expected.to respond_to(:dock).with(1).argument }
+  it "doesn't release bike if empty" do
+    station = DockingStation.new(nil)
+    expect { station.release_bike }.to raise_error("No bike")
+  end
 end
